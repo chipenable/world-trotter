@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		183A36C61E9D888F00E52139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36C51E9D888F00E52139 /* AppDelegate.swift */; };
-		183A36C81E9D888F00E52139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36C71E9D888F00E52139 /* ViewController.swift */; };
 		183A36CB1E9D888F00E52139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183A36C91E9D888F00E52139 /* Main.storyboard */; };
 		183A36CD1E9D888F00E52139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183A36CC1E9D888F00E52139 /* Assets.xcassets */; };
 		183A36D01E9D888F00E52139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183A36CE1E9D888F00E52139 /* LaunchScreen.storyboard */; };
 		183A36DB1E9D888F00E52139 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36DA1E9D888F00E52139 /* WorldTrotterTests.swift */; };
 		183A36E61E9D888F00E52139 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36E51E9D888F00E52139 /* WorldTrotterUITests.swift */; };
+		1849689F1E9EC19B0076974D /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849689E1E9EC19B0076974D /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		183A36C21E9D888F00E52139 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36C51E9D888F00E52139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		183A36C71E9D888F00E52139 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		183A36CA1E9D888F00E52139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183A36CC1E9D888F00E52139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		183A36CF1E9D888F00E52139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		183A36E11E9D888F00E52139 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36E51E9D888F00E52139 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		183A36E71E9D888F00E52139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849689E1E9EC19B0076974D /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				183A36C51E9D888F00E52139 /* AppDelegate.swift */,
-				183A36C71E9D888F00E52139 /* ViewController.swift */,
 				183A36C91E9D888F00E52139 /* Main.storyboard */,
 				183A36CC1E9D888F00E52139 /* Assets.xcassets */,
 				183A36CE1E9D888F00E52139 /* LaunchScreen.storyboard */,
 				183A36D11E9D888F00E52139 /* Info.plist */,
+				1849689E1E9EC19B0076974D /* ConversionViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183A36C81E9D888F00E52139 /* ViewController.swift in Sources */,
+				1849689F1E9EC19B0076974D /* ConversionViewController.swift in Sources */,
 				183A36C61E9D888F00E52139 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +507,7 @@
 				183A36EC1E9D888F00E52139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183A36ED1E9D888F00E52139 /* Build configuration list for PBXNativeTarget "WorldTrotterTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				183A36EF1E9D888F00E52139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183A36F01E9D888F00E52139 /* Build configuration list for PBXNativeTarget "WorldTrotterUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				183A36F21E9D888F00E52139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

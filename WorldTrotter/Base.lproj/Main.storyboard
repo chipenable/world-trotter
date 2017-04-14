@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,28 +45,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-sX-u6W">
-                                <rect key="frame" x="132" y="28" width="111" height="84"/>
-                                <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-FO-6Fo">
+                                <rect key="frame" x="62.5" y="28" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ZtU-mg-rxz"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChaged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Xfz-FV-nSl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fZb-Sf-k9v"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="OVp-ii-uKI" firstAttribute="centerX" secondItem="SXD-sX-u6W" secondAttribute="centerX" id="0fj-Cr-vhg"/>
                             <constraint firstItem="OVp-ii-uKI" firstAttribute="top" secondItem="7GI-9B-uUY" secondAttribute="bottom" constant="8" id="3qh-3Z-I1V"/>
-                            <constraint firstItem="SAJ-lo-V55" firstAttribute="centerX" secondItem="SXD-sX-u6W" secondAttribute="centerX" id="4OH-Rv-5fd"/>
-                            <constraint firstItem="SAJ-lo-V55" firstAttribute="top" secondItem="SXD-sX-u6W" secondAttribute="bottom" constant="8" id="6dr-K3-Q2B"/>
+                            <constraint firstItem="OVp-ii-uKI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="85R-GF-JSr"/>
+                            <constraint firstItem="7GI-9B-uUY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cud-EH-qGN"/>
                             <constraint firstItem="7GI-9B-uUY" firstAttribute="top" secondItem="QLS-BK-oKl" secondAttribute="bottom" constant="8" id="FEi-qS-Fch"/>
-                            <constraint firstItem="QLS-BK-oKl" firstAttribute="centerX" secondItem="SXD-sX-u6W" secondAttribute="centerX" id="KZ5-74-lDz"/>
-                            <constraint firstItem="SXD-sX-u6W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sgg-EX-pCm"/>
+                            <constraint firstItem="SAJ-lo-V55" firstAttribute="top" secondItem="Bsc-FO-6Fo" secondAttribute="bottom" constant="8" id="NYN-8f-NDr"/>
+                            <constraint firstItem="Bsc-FO-6Fo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OT9-qI-FDp"/>
                             <constraint firstItem="QLS-BK-oKl" firstAttribute="top" secondItem="SAJ-lo-V55" secondAttribute="bottom" constant="8" id="biT-D5-wiR"/>
-                            <constraint firstItem="SXD-sX-u6W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="da1-T7-AB4"/>
-                            <constraint firstItem="7GI-9B-uUY" firstAttribute="centerX" secondItem="SXD-sX-u6W" secondAttribute="centerX" id="nv3-ys-a4D"/>
+                            <constraint firstItem="SAJ-lo-V55" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fzc-0D-6U2"/>
+                            <constraint firstItem="QLS-BK-oKl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h0c-ML-xPR"/>
+                            <constraint firstItem="Bsc-FO-6Fo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nQl-BO-xdH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="7GI-9B-uUY" id="C3f-JZ-X7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
